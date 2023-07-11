@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="head :: head_fragment(title = 'ユーザー情報一覧', scripts = ~{::script}, links = ~{::link})"></head>
+<body>
+  <div class="container">
+    <h1>商品詳細</h1>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>商品名</th>
+          <th>値段</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="product : ${product}" th:object="${product}" class="align-middle">
+          <td th:text="*{id}"></td>
+          <td th:text="*{name}"></td>
+          <td th:text="*{price}"></td>
+          <td><a th:href="@{/product/edit/{id}(id=*{id})}" class="btn btn-secondary">編集</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
