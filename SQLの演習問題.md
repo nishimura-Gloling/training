@@ -18,10 +18,10 @@
     </br>商品を扱うテーブルと注文書を扱うテーブルで分けましょう
 
 ### 商品のテーブルを作成してください<br>
-    Create文は以下を参考に学んでください<br>
-    url:https://www.javadrive.jp/mysql/table/index1.html <br>
+  Create文は以下を参考に学んでください<br>
+  url:https://www.javadrive.jp/mysql/table/index1.html <br>
     
-- 商品の扱うデータのイメージ
+- 商品の扱うデータのイメージ<br>
   商品のデータを扱うイメージ以下になります。
     |id|商品名|値段|
     |---|---|---|
