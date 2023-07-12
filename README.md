@@ -164,7 +164,35 @@
 1. 取得した情報をUserクラスに格納してください。
 1. 格納したUserクラスを元に名前を年齢を表示してください<br>
 　　○○さんは何歳です。<br>
-  　※男性の子供のみ表示されること
+   ※男性の子供のみ表示されること
+   ※今回は拡張For文を使って表示してください。
+
+   - 拡張For文の使い方<br>
+     使いどころはオブジェクト配列時によく使います。<br>
+     - 今までのfor文
+     ```java
+     List<User> userList = new ArrayList<User>(); ユーザの配列を生成。
+
+     <処理省略>　
+
+     //for文の構文　for(int i ; i < 配列変数.size() ; i++){
+     for(int i ; i < userList.size()); i++) {
+       User　user　= userList.get(i);
+     　System.out.println（名前と年齢を表示）
+     }
+     ```
+
+     - 拡張For文
+
+     ```java
+     List<User> userList = new ArrayList<User>(); ユーザの配列を生成。
+
+     <処理省略>
+     // 拡張for文の構文　for(型 変数名(変数名はなんでもいい): 配列の変数){ -- この書き方で配列の中身すべて見てくれます。
+     for(User user: userList){
+       System.out.println（名前と年齢を表示）
+     }
+     ```
 1. 上記ができたら女性の大人も表示してください<br>
   
 
