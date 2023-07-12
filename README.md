@@ -88,11 +88,14 @@
 　以下の処理が必要になる。
   
   ``` java
+  //Listはライブラリを使った配列です。
+  //初期化の構文はList<クラス> 変数名 = new ArrayList<クラス>()
+  //<クラス>に該当のクラスを設定するとそのクラスの配列を使用することができます。
   List<Product> productList = new ArrayList<Product>();
   while (res.next()) {
     Product product = new Product();
-    product.setName(res.getString("name"));
-    product.setPrice(res.getInt("price"))
+    product.setName(res.getString("name")); -- getStringの中はDBのカラム名です。getStringはDBのvarcharになります。 
+    product.setPrice(res.getInt("price")); -- getIntの中はDBのカラム名です。getIntはDBのintになります。
     productList.add(product);
   ```
 
@@ -108,4 +111,61 @@
   ///接続処理のクラス
   con.close();
   ```
+
+## 演習問題3
+1. Mysqlに接続してユーザのテーブルを作成してください。<br>
+ 
+    テーブル名はusers <br>
+      
+    |論理名|物理名|型|備考|
+    |---|---|---|---|
+    | id |  id  |  int | 主キーを設定<br>AUTO_INCREMENTで自動採番してください |
+    |名前|  name|  varchar(20)  | not null で　null値を入れないように設定 |
+    |年齢|  age|  int  |  |
+    |性別|  sex | int | 1:男性、2:女性|
+ 
+   <br>
+   ※論理名は物理名を日本語役したものです。<br>
+   ※テーブル作成には全く使わないです。<br>
+   
+   - 一般的なルールを記載します。（現場で適用されていないところがたまにあります）<br>
+     - テーブル名は複数系で小文字で設定します<br>
+     例　users
+     - カラム名は単数形で小文字で設定します <br>
+     例　ユーザの名前ならname
+    - 複数単語を組み合わせる時は_で繋げます。今回は使わないですが
+      ※スネーク形式と呼ばれてる設定の仕方です。<br>
+      例　外部キーを設定するときなど　user_id<br>  
+      
+1. Mysqlで以下のデータを入れてください。<br>
+
+    |名前(name)|年齢(age)|性別(sex)|
+    |---|---|---|
+    |鈴木|19|1|
+    |田中|19|2|
+    |佐藤|20|1|
+    |斎藤|20|2|
+    |近本|21|1|
+    |高橋|21|2|
     
+1. JavaのソースでUserのクラスを作成してください。<br>
+
+    |変数名|型|修飾子|備考|
+    |---|---|---|---|
+    | id | int  |private |今後の処理でUserテーブルのidを設定する|
+    |name| String |private |今後の処理でUserテーブルのnameを設定する|
+    |age|  int  | private |今後の処理でUserテーブルのageを設定する |
+    |sex | int | private |今後の処理でUserテーブルのsexを設定する|
+    
+    - メソッドは上記の変数に対してsetterとgetterを設定してください　<br>
+      例　setName(String name) .getName()など<br>
+
+1. DB接続してUserテーブルから男性の子供の情報を取得してください。
+1. 取得した情報をUserクラスに格納してください。
+1. 格納したUserクラスを元に名前を年齢を表示してください<br>
+　　○○さんは何歳です。<br>
+  　※男性の子供のみ表示されること
+1. 上記ができたら女性の大人も表示してください<br>
+  
+
+
