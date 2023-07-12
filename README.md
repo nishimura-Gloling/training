@@ -21,7 +21,7 @@
     
  -  ますは日付処理あたりでライブラリの使い方に慣れましょう
     -  LocalDateTime <br>
-       日付系の処理を使うにはLocalDateTimeを使います<br>
+       日付系の処理を使うにはLocalDateTimeを使用します<br>
        ライブラリを使用する為にはimport文を使用します<br>
        import文の場所はパッケージ文の直下で記載します<br>
        ``` java
