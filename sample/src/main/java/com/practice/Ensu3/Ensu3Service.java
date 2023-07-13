@@ -47,7 +47,7 @@ public class Ensu3Service {
 	}
 	
 	
-	public static List<User> getUserList(ResultSet res) throws SQLException{
+	private static List<User> getUserList(ResultSet res) throws SQLException{
 		List<User> userList = new ArrayList<User>();
 
 		while (res.next()) {
