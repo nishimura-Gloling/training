@@ -28,10 +28,10 @@ public class Ensu3Service {
 		stmt = con.prepareStatement("SELECT * FROM users where age < 20 and sex = 1");
 		ResultSet res = stmt.executeQuery();
 
-		List<User> userAdultFeMaleList = getUserList(res);
+		List<User> userChileMaleList = getUserList(res);
 		res.close();
 		stmt.close();
-		return userAdultFeMaleList;
+		return userChileMaleList;
 	}
 	
 	
