@@ -54,6 +54,7 @@
   今回はフレームワークを使わない方法を説明します（このやり方が一番めんどくさいです)。<br>
 　※間に合えばWebアプリ作成でSpringJDBC教えてます。<br>
   以下がJavaの接続と実施です。
+  <br> ソースサンプル:https://github.com/nishimura-Gloling/training/blob/master/sample/src/main/java/com/practice/DBSampleMain.java
 
   - DBの接続とSQL実行
   ``` java
