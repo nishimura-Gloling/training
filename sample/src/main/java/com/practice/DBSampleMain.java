@@ -14,17 +14,6 @@ import com.exmple.enshu.ProductService;
 public class DBSampleMain {
 	public static void main(String[] args) throws SQLException {
 
-		Product orange = new Product();
-		orange.setName("オレンジ");
-		orange.setPrice(100);
-		orange.setReducedTaxKbn(0);
-		orange.setTaxPrice();
-
-		Product pc = new Product();
-		pc.setName("パソコン");
-		pc.setPrice(50000);
-		pc.setReducedTaxKbn(1);
-
 		// 接続オブジェクトの定義
 		Connection con = null;
 		// 接続先情報を表す文字列の定義
@@ -34,8 +23,7 @@ public class DBSampleMain {
 		// 接続時に使用するパスワードの定義
 		String password = "root";
 		
-		List<Product> productList = new ArrayList<Product>(); 		
-		double pai = Math.PI;
+		List<Product> productList = new ArrayList<Product>();
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			PreparedStatement stmt = null;
@@ -66,11 +54,5 @@ public class DBSampleMain {
 			e.printStackTrace();	
 			throw e;
 		}
-
-		System.out.println("オレンジの価格(税込み)は" + ProductService.getTaxPrice(orange.getPrice(), orange.getReducedTaxKbn()));
-		System.out.println("パソコンの価格(税込み)は" + ProductService.getTaxPrice(pc.getPrice(), pc.getReducedTaxKbn()));
-		System.out.println("オレンジの価格(税込み)は" + orange.getTaxPrice());
-		System.out.println("パソコンの価格(税込み)は" + pc.getTaxPrice());
-		
 	}
 }

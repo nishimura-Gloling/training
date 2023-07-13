@@ -23,7 +23,7 @@ public class Ensu3Main {
 		// 大人女性の情報を取得
 		List<User> userAdultFemaleList = Ensu3Service.getAdultFeMaleList(con);
 		// 大人女性をコンソールに表示
-		System.out.println("<<<<<<<子供の男性は>>>>>>>");
+		System.out.println("<<<<<<<大人の女性は>>>>>>>");
 		Ensu3Service.display(userAdultFemaleList);
 		
 		con.close();
