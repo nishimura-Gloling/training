@@ -54,6 +54,7 @@
   今回はフレームワークを使わない方法を説明します（このやり方が一番めんどくさいです)。<br>
 　※間に合えばWebアプリ作成でSpringJDBC教えてます。<br>
   以下がJavaの接続と実施です。
+  <br> ソースサンプル:https://github.com/nishimura-Gloling/training/blob/master/sample/src/main/java/com/practice/DBSampleMain.java
 
   - DBの接続とSQL実行
   ``` java
@@ -127,7 +128,7 @@
  
    <br>
    ※論理名は物理名を日本語にしたものです。<br>
-   ※テーブル作成には全く使わないです。<br>
+   ※論理名はテーブル作成には全く使わないです。<br>
    
    - 一般的なルールを記載します。（現場で適用されていないところがたまにあります）<br>
      - テーブル名は複数系で小文字で設定します<br>
