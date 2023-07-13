@@ -3,6 +3,7 @@
 - 内容
   - メソッドの使い方をJava 基礎問題ドリル ～メソッドを理解する～
 - パッケージ:/sample/src/main/java/com/practice
+  <br>以下のURLの内容を解いてください
 - URL: https://mitani.cs.tsukuba.ac.jp/book_support/java/java_dril_method30.pdf
 
 ## ライブラリ
